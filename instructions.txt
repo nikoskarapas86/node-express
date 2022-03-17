@@ -1,0 +1,31 @@
+1. npm init -y
+2.(write in decv depedencies )
+npm i --save-dev typescript
+npm i --save-dev ts-node 
+npm i --save-dev @types/node
+3. scripts: {"build": "npx tsc"}
+4. npx tsc --init (this will initiate tsconfig.json)
+5. run npm run build
+6. npm i --save-dev nodemon(after write something an saved rerun server)
+7. (install express and work with typescript)
+npm install express
+npm i --save-dev @types/express
+npm i --save-dev @types/express
+{sctipt:{"start": "nodemon src/index.ts"}}
+8.npm install pretier
+9. npm install eslint
+10. testing libraries
+npm i jasmine 
+npm i jasmine-spec-reporter
+npm i --save-dev @types/jasmine
+(
+    scripts:{
+        "jasmine": "jasmine",
+        "test": "npm run build && npm run jasmine"
+    }
+    *  "exclude": ["node_modules", "./dist", "spec"]
+
+)
+11. (run the app)
+npm run start to see the application start in development mode.
+ npm run build and=> node build/. to build and run your file project.
