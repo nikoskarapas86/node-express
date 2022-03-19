@@ -1,5 +1,5 @@
 1. npm init -y
-2.(write in decv depedencies )
+2.(write in dev depedencies )
 npm i --save-dev typescript
 npm i --save-dev ts-node 
 npm i --save-dev @types/node

@@ -1,0 +1,41 @@
+*File System is one of the core node.js modules.
+*The File System Module also allows us to work with data by creating, delete, reading, and writing to files
+*File System is almost entirely asynchronous
+*s, we can use the File System Promises API (import {promises as fs} from fs;)
+*Where Do We Get Data?
+-The most basic is application memory, where you save data to variables
+-in front end local storage ,session storage, cookies,
+- with external APIs where you can read external data from someone else's API.
+- To an external file. With Node.js there are two ways of doing this, through File System, or through a database.
+
+File System
+
+r - allows for the reading of a file
+r+ - allows for the reading and writing of a file,
+ will overwrite content in the file
+w+ - allows for the reading and writing of a file,
+ will create a file if it does not yet exist
+a - allows for reading and writing of a file and will append new content to the end of the file, 
+not overwriting current content
+a+ - allows for reading and writing of a file, will create a file if it does not yet exist, 
+and will append new content to the end of the file, not overwriting current content
+
+const writeData = async () => {
+  const myFile = await fsPromises.open('myfile.txt', a+);
+  await myFile.write('add text');
+}
+
+
+read() and readFile()
+
+const readData = async () => {
+  const buff = new Buffer.alloc(26);
+  const myFile = await fsPromises.open('myfile.txt', a+);
+  await myFile.read(buff, 0, 26);
+  console.log(myFile);
+}
+
+const readData = async () => {
+  const myFile = await fsPromises.readFile('myfile.txt', 'utf-8');
+  console.log(myFile);
+}

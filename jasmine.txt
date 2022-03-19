@@ -1,0 +1,99 @@
+Jasmine
+
+------------
+
+suites :
+
+-----------
+
+It’s created using the Jasmine global function describe(title, callbackFunction),
+
+It’s used to test a specific behavior of the JavaScript code
+
+ 
+
+How to Group and Nest Suites(describe  can contain other describes)
+
+----------------------------
+
+ 
+
+describe("String Utils", function() { /*...*/});describe("Math Utils", function() { /*...*/});
+
+ 
+
+ 
+
+ 
+
+ 
+
+*You can temporarily disable a suite using the xdescribe()
+
+ 
+
+Specs
+
+------
+
+A spec declares a test case that belongs to a test suite
+
+it(title,callbackfunction)
+
+ 
+
+describe("String Utils", function() {
+
+ it("should be able to lower case a string",function() {    /*...*/  });
+
+ it("should be able to upper case a string",function() {    /*...*/  });
+
+  it("should be able to confirm if a string contains a substring",function() {    /*...*/  });
+
+  it("should be able repeat a string multiple times",function() {    /*...*/  })
+
+;});
+
+ 
+
+* exclude individual specs using the xit()
+
+ 
+
+ 
+
+Expectations
+
+------------
+
+Expectations are created using the expect()
+
+ 
+
+Built-In Matchers
+
+-----------------
+
+toBe() for testing for identity,
+
+toBeNull() for testing for null,
+
+toBeUndefined()/toBeDefined() for testing for undefined/not undefined,
+
+toBeNaN() for testing for NaN (Not A Number)
+
+toEqual() for testing for equality,
+
+toBeFalsy()/toBeTruthy() for testing for falseness/truthfulness etc.
+
+ 
+
+Using beforeEach() and afterEach()
+
+----------------------------------
+
+ 
+
+*The beforeEach function is called once before each spec in the suite where it is called.
+
+*The afterEach function is called once after each spec in the suite where it's called.
